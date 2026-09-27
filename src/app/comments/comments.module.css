@@ -1,0 +1,537 @@
+.page {
+  min-height: 100vh;
+  background: #f6f7f9;
+  color: #161616;
+  padding: 48px 24px;
+}
+
+.container {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #e25422;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: #6b6f76;
+  font-size: 16px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: white;
+  border: 1px solid #e6e8eb;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.statusDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #24b47e;
+  box-shadow: 0 0 0 4px rgba(36, 180, 126, 0.12);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e6e8eb;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(20, 24, 30, 0.035);
+}
+
+.card span {
+  display: block;
+  color: #757a82;
+  font-size: 13px;
+  font-weight: 650;
+  margin-bottom: 10px;
+}
+
+.card strong {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e6e8eb;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(20, 24, 30, 0.04);
+}
+
+.panelHeader {
+  padding: 22px 24px;
+  border-bottom: 1px solid #eceef0;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.panelHeader p {
+  margin: 5px 0 0;
+  color: #7a7e85;
+  font-size: 13px;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 13px 18px;
+  text-align: left;
+  color: #777c84;
+  background: #fafafa;
+  border-bottom: 1px solid #eceef0;
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+
+.table td {
+  padding: 18px;
+  border-bottom: 1px solid #f0f1f2;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tbody tr:hover {
+  background: #fcfcfc;
+}
+
+.commentText {
+  min-width: 260px;
+  max-width: 360px;
+  font-weight: 550;
+}
+
+.replyText {
+  min-width: 330px;
+  max-width: 520px;
+  color: #555a61;
+}
+
+.time {
+  color: #777c84;
+  white-space: nowrap;
+  font-size: 13px !important;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: capitalize;
+  background: #eef0f2;
+  color: #555;
+}
+
+.status_pending {
+  background: #fff4d8;
+  color: #8a6200;
+}
+
+.status_generating {
+  background: #e8efff;
+  color: #315db7;
+}
+
+.status_ready {
+  background: #e9f3ff;
+  color: #1665a8;
+}
+
+.status_replying {
+  background: #eee9ff;
+  color: #6249a8;
+}
+
+.status_replied {
+  background: #e6f7ef;
+  color: #14734b;
+}
+
+.status_failed {
+  background: #fde9e9;
+  color: #b33838;
+}
+
+.status_ignored {
+  background: #eeeeee;
+  color: #666;
+}
+
+.error {
+  margin: 24px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #fdeaea;
+  color: #a72d2d;
+  font-weight: 650;
+}
+
+.empty {
+  padding: 70px 24px;
+  text-align: center;
+  color: #777c84;
+}
+
+@media (max-width: 950px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 28px 14px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card strong {
+    font-size: 25px;
+  }
+}
+
+.settingsPanel {
+  background: white;
+  border: 1px solid #e6e8eb;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 24px rgba(20, 24, 30, 0.04);
+}
+
+.settingsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #eceef0;
+}
+
+.settingsHeader h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.settingsHeader p {
+  margin: 5px 0 0;
+  color: #7a7e85;
+  font-size: 13px;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.toggleRow input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #e25422;
+}
+
+.toggleRow strong {
+  min-width: 28px;
+  font-size: 12px;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.label {
+  display: block;
+  margin-bottom: 9px;
+  color: #555a61;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.delayRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.numberInput {
+  width: 95px;
+  border: 1px solid #dfe2e6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: white;
+}
+
+.delayRow span {
+  color: #777c84;
+  font-size: 13px;
+}
+
+.instructionsBox {
+  width: 100%;
+}
+
+.textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 130px;
+  border: 1px solid #dfe2e6;
+  border-radius: 12px;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fafafa;
+}
+
+.textarea:focus,
+.numberInput:focus {
+  outline: none;
+  border-color: #e25422;
+  box-shadow: 0 0 0 3px rgba(226, 84, 34, 0.08);
+}
+
+.helpText {
+  margin: 8px 0 0;
+  color: #8a8e94;
+  font-size: 12px;
+}
+
+.settingsFooter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.saveButton {
+  border: none;
+  border-radius: 10px;
+  background: #e25422;
+  color: white;
+  padding: 11px 18px;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  opacity: 0.92;
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.saveMessage {
+  color: #14734b;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+@media (max-width: 750px) {
+  .settingsHeader {
+    flex-direction: column;
+  }
+
+  .settingsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.numberInput,
+.textarea {
+  color: #161616;
+  -webkit-text-fill-color: #161616;
+  color-scheme: light;
+}
+
+.numberInput {
+  background: #ffffff;
+}
+
+.textarea {
+  background: #fafafa;
+}
+
+.numberInput::placeholder,
+.textarea::placeholder {
+  color: #9a9da2;
+  -webkit-text-fill-color: #9a9da2;
+}
+
+/* ---------- Dark mode override ---------- */
+.page {
+  background: #0f1115;
+  color: #f3f4f6;
+  min-height: 100vh;
+}
+
+.header h1,
+.panel h2,
+.card strong,
+.table th,
+.table td,
+.label,
+.delayRow span,
+.saveMessage {
+  color: #f3f4f6;
+}
+
+.header p,
+.panel p,
+.card span,
+.helpText {
+  color: #a7b0bd;
+}
+
+.card,
+.panel,
+.tableWrap,
+.settingsBox,
+.settingsPanel,
+.commentsBox {
+  background: #171b22;
+  border: 1px solid #2a313d;
+  box-shadow: none;
+}
+
+.table th {
+  background: #1d232d;
+  color: #c8d0db;
+}
+
+.table td {
+  border-top: 1px solid #2a313d;
+}
+
+.numberInput,
+.textarea {
+  background: #10141a;
+  color: #f3f4f6;
+  -webkit-text-fill-color: #f3f4f6;
+  border: 1px solid #384152;
+}
+
+.numberInput::placeholder,
+.textarea::placeholder {
+  color: #7f8896;
+  -webkit-text-fill-color: #7f8896;
+}
+
+.saveButton {
+  background: #e25422;
+  color: white;
+}
+
+.saveButton:hover {
+  opacity: 0.92;
+}
+
+.status_ready {
+  background: #1d3a2a;
+  color: #7ee2a8;
+}
+
+.status_pending {
+  background: #3a3218;
+  color: #f3d46b;
+}
+
+.status_replied {
+  background: #1b2d46;
+  color: #8ec5ff;
+}
+
+.status_failed {
+  background: #452222;
+  color: #ff9c9c;
+}
+
+.status_ignored {
+  background: #30343a;
+  color: #c0c4cc;
+}
